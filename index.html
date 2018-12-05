@@ -1,0 +1,77 @@
+<html lang="en">
+<!--
+Muhammad Muneeb
+Assignment Seven
+ -->
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 7 - Using the jQuery Validation Plugin with Your Dynamic Table</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Home Work Eight with Sliders</h1>
+    <form id="form" novalidate>
+
+        <!-- Multiplier form options -->
+        <fieldset>
+            <legend>Horizontal (Multiplier)</legend>
+            <div>
+                <label for="multiplierMin">Minimum</label>
+                <input type="number" id="multiplierMin" name="multiplierMin"
+                    value="-12" min="-12" max="12" autocomplete="off">
+
+                <div id="multiplierMinSlider" class="slider"></div>
+            </div>
+
+            <div>
+                <label for="multiplierMax">Maximum</label>
+                <input type="number" id="multiplierMax" name="multiplierMax"
+                    value="12" min="-12" max="12" autocomplete="off">
+
+                <div id="multiplierMaxSlider" class="slider"></div>
+            </div>
+        </fieldset>
+        <div id="multiplierError" class="error hidden"></div>
+
+
+        <!-- Multiplicand form options -->
+        <fieldset>
+            <legend>Vertical (Multiplicand)</legend>
+            <div>
+                <label for="multiplicandMin">Minimum</label>
+                <input type="number" id="multiplicandMin" name="multiplicandMin"
+                    value="-12" min="-12" max="12" autocomplete="off">
+
+                <div id="multiplicandMinSlider" class="slider"></div>
+            </div>
+
+            <div>
+                <label for="multiplicandMax">Maximum</label>
+                <input type="number" id="multiplicandMax" name="multiplicandMax"
+                    value="12" min="-12" max="12" autocomplete="off">
+
+                <div id="multiplicandMaxSlider" class="slider" ></div>
+            </div>
+        </fieldset>
+        <div id="multiplicandError" class="error hidden"></div>
+
+        <input type="submit" value="Create Tab">
+        <input id="removeAllTabs" type="button" value="Remove All Tabs">
+        <label class="dynamicTab">
+            <input type="checkbox" id="dynamicTab" name="dynamicTab" value="dynamicTab">
+            Update Active tab
+        </label>
+    </form>
+
+    <!-- Tabbed table area -->
+    <div id="tableTabs" class="hidden">
+        <ul></ul>
+    </div>
+  </body>
+</html>
